@@ -439,6 +439,16 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
   .project-card { grid-template-columns: 1fr; }
   .project-number { display: none; }
 }
+  .project-photo {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.project-photo:hover { opacity: 0.85; }
 </style>
 </head>
 <body>
@@ -585,7 +595,9 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
             <span class="project-chip">LLMs</span><span class="project-chip">NLP</span><span class="project-chip">Data protection</span><span class="project-chip">Banking</span>
           </div>
         </div>
+        <img src="photo-ing.jpg" class="project-photo" alt="ING live demo">
         <div class="project-number">02</div>
+        
       </div>
 
       <div class="project-card fade-in">
@@ -636,9 +648,32 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
             <span class="project-chip">Computer vision</span><span class="project-chip">Real-time inference</span><span class="project-chip">Browser extension</span>
           </div>
         </div>
+        <img src="photo-orange.jpg" class="project-photo" alt="Orange Hackathon presentation">
         <div class="project-number">05</div>
       </div>
-
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-tag">Data Engineering</span>
+          <span class="project-year">2025</span>
+        </div>
+        <h3 class="project-title">VacaViz — Job Market Analytics Platform</h3>
+        <p class="project-description">End-to-end data pipeline aggregating job market data from multiple sources (Actiris, VDAB). Designed the full PostgreSQL schema, built ETL scripts, and delivered interactive dashboards for job market analysis in Belgium.</p>
+        <ul class="project-bullets">
+          <li>PostgreSQL database design with normalized schema</li>
+          <li>ETL pipeline ingesting JSON feeds from 2 public APIs</li>
+          <li>Interactive multilingual chatbot interface (FR / NL / EN)</li>
+          <li>Presented live to an audience at Cefora Brussels</li>
+        </ul>
+        <div class="project-stack">
+          <span class="tag">Python</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">SQL</span>
+          <span class="tag">React</span>
+          <span class="tag">FastAPI</span>
+        </div>
+        <img src="photo-cefora.jpg" class="project-photo" alt="VacaViz presentation at Cefora">
+        <div class="project-number">06</div>
+      </div>
     </div>
   </div>
 </section>
@@ -693,6 +728,14 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
 
     </div>
   </div>
+  <div class="experience-extra">
+  <p class="experience-note">
+    🎓 <strong>Led a Scrum methodology workshop</strong> for a cohort of 15+ developers —
+    covered Sprint Cycle, user stories, backlog prioritization, and hands-on card exercises.
+  </p>
+  <img src="photo-scrum-1.jpg" class="project-photo" alt="Scrum workshop facilitation">
+  <img src="photo-scrum-2.jpg" class="project-photo" alt="Sprint Cycle presentation">
+</div>
 </section>
 
 <!-- CERTIFICATIONS -->
