@@ -447,6 +447,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
   margin-top: 1rem;
   cursor: pointer;
   transition: opacity 0.2s;
+  cursor: zoom-in; 
 }
 .project-photo:hover { opacity: 0.85; }
 </style>
@@ -601,7 +602,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
             <span class="project-chip">Data protection</span>
             <span class="project-chip">Banking</span>
           </div>
-          <img src="photo-ing.jpg" class="project-photo" alt="ING live demo">
+          <img src="photo-ing.jpg" class="project-photo" alt="ING live demo" onclick="openPhoto(this.src, this.alt)">
         </div>
         <div class="project-number">02</div>
       </div>
@@ -629,7 +630,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
             <span class="project-chip">ML / Prediction</span>
             <span class="project-chip">AI Agent</span>
           </div>
-          <img src="photo-cefora.jpg" class="project-photo" alt="VacaViz presentation at Cefora">
+          <img src="photo-cefora.jpg" class="project-photo" alt="VacaViz presentation at Cefora" onclick="openPhoto(this.src, this.alt)">
         </div>
         <div class="project-number">06</div>
       </div>
@@ -668,7 +669,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
             <span class="project-chip">Real-time inference</span>
             <span class="project-chip">Browser extension</span>
           </div>
-          <img src="photo-orange.jpg" class="project-photo" alt="Orange Hackathon presentation">
+          <img src="photo-orange.jpg" class="project-photo" alt="Orange Hackathon presentation" onclick="openPhoto(this.src, this.alt)">
         </div>
         <div class="project-number">05</div>
       </div>
@@ -724,8 +725,8 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
           covered Sprint Cycle, user stories, backlog prioritization, and hands-on card exercises.
         </div>
         <div style="display:flex; gap:0.75rem; margin-top:1rem; flex-wrap:wrap;">
-          <img src="photo-scrum-1.jpg" class="project-photo" alt="Scrum workshop facilitation" style="width:48%; max-height:180px;">
-          <img src="photo-scrum-2.jpg" class="project-photo" alt="Sprint Cycle presentation" style="width:48%; max-height:180px;">
+          <img src="photo-scrum-1.jpeg" class="project-photo" alt="Scrum workshop facilitation" onclick="openPhoto(this.src, this.alt)" style="width:48%; max-height:180px;">
+          <img src="photo-scrum-2.jpeg" class="project-photo" alt="Sprint Cycle presentation" onclick="openPhoto(this.src, this.alt)" style="width:48%; max-height:180px;">
         </div>
       </div>
 
@@ -900,6 +901,13 @@ function openLightbox(key) {
   const d = certImages[key];
   document.getElementById('lightboxImg').src = d.src;
   document.getElementById('lightboxCaption').textContent = d.caption;
+  document.getElementById('certifLightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function openPhoto(src, alt) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxCaption').textContent = alt;
   document.getElementById('certifLightbox').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
