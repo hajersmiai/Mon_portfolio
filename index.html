@@ -567,17 +567,26 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
           <h3 class="project-title">AI Visitor Assistant — Van Gogh Exhibition</h3>
           <p class="project-company">Exhibition Hub · Brussels</p>
           <ul class="project-bullets">
-            <li>Built a real-time conversational AI assistant for a museum exhibition</li>
+            <li>Built a real-time conversational AI voice kiosk for a museum exhibition, in two architectures: a multi-level RAG pipeline and a LoRA fine-tuned local LLM runtime — both using XTTS voice cloning for the assistant's voice</li>
             <li>Multi-level RAG pipeline over a <strong>2,233-document knowledge base</strong></li>
             <li>1,858 Van Gogh letters (TEI format) + 345 Wikidata artworks indexed</li>
             <li>Semantic cache + LLM-based answer reformulation for real-time responses</li>
-            <li>Voice interaction via STT/TTS, visitor detection, and a 3D immersive interface</li>
+            <li>LoRA version: QLoRA fine-tuned local model, full conversational state-machine orchestration, 24/7 reliability layer (Windows service, watchdog)</li>
+            <li>Real-time voice interaction (faster-whisper STT) and a Unity 3D avatar synchronized with the conversational engine</li>
+            <li>Accent and sentiment detection module — the avatar adapts its response tone and accent to the visitor</li>
+            <li>Human-like barge-in (interruption) handling; GPU-based inference, FastAPI deployment, knowledge-base preparation</li>
             <li>GPU-based inference, FastAPI deployment, and knowledge-base preparation</li>
           </ul>
           <div class="project-chips">
             <span class="project-chip">LLMs</span>
             <span class="project-chip">RAG</span>
             <span class="project-chip">Vector Search</span>
+            <span class="project-chip">LoRA/QLoRA</span>
+            <span class="project-chip">PyTorch </span>
+            <span class="project-chip">faster-whisper XTTS </span>
+            <span class="project-chip">Ollama </span>
+            <span class="project-chip">hnswlib </span>
+            <span class="project-chip">Unity 3D </span>
             <span class="project-chip">FastAPI</span>
             <span class="project-chip">Docker</span>
             <span class="project-chip">STT/TTS</span>
@@ -592,11 +601,17 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
           <h3 class="project-title">SecurePrompt — AI Data Protection</h3>
           <p class="project-company">ING · Brussels</p>
           <ul class="project-bullets">
-            <li>Contributed to an AI-driven platform for detecting sensitive data in LLM prompts</li>
+            <li>Contributed to an AI-driven data-protection pipeline ingesting multi-format documents (PDF, Word, Excel, image, text)</li>
+            <li>Detects and masks sensitive data before sending content to an LLM, then decrypts and reconstructs the response in the original file format</li>
+            <li>Built a Node.js platform around the pipeline: authentication, document upload/response interface, an analytics dashboard (sensitivity % and level per document), and full user activity history</li>
             <li>Applied in a high-security banking environment with strict compliance requirements</li>
-            <li>NLP-based data classification and prompt safety guardrails</li>
           </ul>
           <div class="project-chips">
+            <span class="project-chip">Python </span>
+            <span class="project-chip">Node.js</span>
+            <span class="project-chip">PyPDF2</span>
+            <span class="project-chip">pdfplumber </span>
+            <span class="project-chip">python-docx</span>
             <span class="project-chip">LLMs</span>
             <span class="project-chip">NLP</span>
             <span class="project-chip">Data protection</span>
@@ -623,8 +638,17 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
           </ul>
           <div class="project-chips">
             <span class="project-chip">Python</span>
-            <span class="project-chip">Web scraping</span>
+            <span class="project-chip">Playwright </span>
+            <span class="project-chip">spaCy </span>
+            <span class="project-chip">BeautifulSoup</span>
+            <span class="project-chip">REST API</span>
+            <span class="project-chip">SQLAlchemy </span>
+            <span class="project-chip">Alembic </span>
+            <span class="project-chip">Pydantic </span>
             <span class="project-chip">PostgreSQL</span>
+            <span class="project-chip">LangChain </span>
+            <span class="project-chip">OpenAI API </span>
+            <span class="project-chip">Sentence-Transformers </span>
             <span class="project-chip">React</span>
             <span class="project-chip">FastAPI</span>
             <span class="project-chip">ML / Prediction</span>
@@ -660,12 +684,15 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
           <h3 class="project-title">Deepfake Detection Browser Extension</h3>
           <p class="project-company">Orange Hackathon · Brussels</p>
           <ul class="project-bullets">
-            <li>Real-time browser extension to flag manipulated media on the fly</li>
-            <li>Combined computer vision and fast inference under hackathon constraints</li>
-            <li>Working prototype delivered from scratch in a time-pressured environment</li>
+            <li>Real-time browser extension: right-click on an image, video, or text to trigger an analysis</li>
+            <li>Popup displays a confidence score and a verdict (real/fake for image & video, AI-generated/human-written for text)</li>
+            <li>Working prototype delivered from scratch in a time-pressured hackathon environment</li>
           </ul>
           <div class="project-chips">
             <span class="project-chip">Computer vision</span>
+            <span class="project-chip">Hugging Face Detection </span>
+            <span class="project-chip">API </span>
+            <span class="project-chip">Node.js </span>
             <span class="project-chip">Real-time inference</span>
             <span class="project-chip">Browser extension</span>
           </div>
@@ -693,7 +720,44 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
         </div>
         <div class="project-number">06</div>
       </div>
-
+      <div class="project-card fade-in">
+        <div>
+          <div class="project-tag-top">🌐 Open source · Python</div>
+          <h3 class="project-title">Natural Language-to-SQL Query Agent</h3>
+          <p class="project-company">Personal project ·AI Agent <a href="https://github.com/hajersmiai/challenge_MLL/blob/main/natural_language_to_sql.py" style="color:var(--terracotta);">GitHub ⭐</a></p>
+          <ul class="project-bullets">
+            <li>Built an AI agent that translates natural-language questions into SQL queries</li>
+            <li>Returns live results from a SQLite database through an interactive Streamlit interface</li>
+          </ul>
+          <div class="project-chips">
+            <span class="project-chip">Python</span>
+            <span class="project-chip">Streamlit </span>
+            <span class="project-chip">SQLite </span>
+            <span class="project-chip">Pandas </span>
+            <span class="project-chip">Asyncio </span>
+          </div>
+        </div>
+        <div class="project-number">07</div>
+      </div>
+      <div class="project-card fade-in">
+        <div>
+          <div class="project-tag-top">🌐 Open source · Python</div>
+          <h3 class="project-title">Multilingual Text Translator</h3>
+          <p class="project-company">🌍 Personal project · NLP <a href="https://github.com/hajersmiai/challenge_MLL/blob/main/app.py" style="color:var(--terracotta);">GitHub ⭐</a></p>
+          <ul class="project-bullets">
+            <li>Streamlit app detecting and translating informal multilingual text (e.g. Franco-Arabic) into a user-specified target language</li>
+            <li>Integrated an external translation API</li>
+          </ul>
+          <div class="project-chips">
+            <span class="project-chip">Python</span>
+            <span class="project-chip">Streamlit </span>
+            <span class="project-chip">Requests </span>
+            <span class="project-chip">API Integration</span>
+            <span class="project-chip">Asyncio </span>
+          </div>
+        </div>
+        <div class="project-number">08</div>
+      </div>
     </div>
   </div>
 </section>
@@ -740,15 +804,23 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
 
       <div class="timeline-item fade-in">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">Dec 2010 – Jun 2023</div>
-        <div class="timeline-role">Co-Founder </div>
+        <div class="timeline-date"> 2018 – 2023</div>
+        <div class="timeline-role">Administrative & Technical Coordinator </div>
         <div class="timeline-company">Business Technology · Tunisia</div>
-        <div class="timeline-desc">Co-founded and managed a company specializing in software validation, verification, and test automation, overseeing operations, administrative coordination, and business development for 12+ years.</div>
+        <div class="timeline-desc">Coordinated software validation, verification, and test automation projects; managed administrative operations (contracts, invoicing, budget follow-up); built activity-tracking dashboards; contributed to process-improvement initiatives.</div>
+      </div>
+      
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Mar 2012 – 2018</div>
+        <div class="timeline-role">Career Break </div>
+        <div class="timeline-company">Family Responsibilities</div>
+        <div class="timeline-desc">Paused professional activity to focus on family responsibilities.</div>
       </div>
 
       <div class="timeline-item fade-in">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">Dec 2010 – Jun 2012</div>
+        <div class="timeline-date">Mar 2010 – Mar 2012</div>
         <div class="timeline-role">Java Developer</div>
         <div class="timeline-company">Siveco TS · Tunisia</div>
         <div class="timeline-desc">Developed and optimized standard programs for COSWIN (CMMS) and contributed to testing campaigns for standard modules.</div>
@@ -775,7 +847,14 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
           <div class="certif-overlay">View certificate →</div>
         </a>
       </div>
-
+      <div class="certif-card certif-img-card fade-in">
+        <div class="certif-org" style="color:var(--terracotta);">Becode· December 2025</div>
+        <div class="certif-name">AI/ Data Operator</div>
+        <a href="#" class="certif-img-wrap" onclick="openLightbox('da');return false;" style="cursor:zoom-in;">
+          <img src="Becode_certifications.pdf">
+          <div class="certif-overlay">View certificate →</div>
+        </a>
+      </div>
       <div class="certif-card certif-img-card fade-in">
         <div class="certif-org" style="color:#1F5DC4;">IBM / Coursera · Déc. 2025</div>
         <div class="certif-name">Machine Learning with Python</div>
