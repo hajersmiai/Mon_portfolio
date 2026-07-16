@@ -6,7 +6,7 @@
 
 ---
 
-Data & AI Engineer with hands-on experience building LLM-powered applications, multi-level RAG systems, analytics pipelines, and interactive BI dashboards. From Java development, through a decade of operations and project coordination, to AI engineering. Looking to bring this blend of technical skill and professional maturity to a mid-level Data/AI Engineering role.
+Data & AI Engineer with hands-on experience building LLM-powered applications, multi-level RAG systems, analytics pipelines, and interactive BI dashboards. After a career break and several years coordinating technical and administrative operations, I transitioned into tech through data engineering and AI — combining an entrepreneurial mindset with solid technical foundations.
 
 📍 Brussels, Belgium &nbsp;|&nbsp; 🔍 Open to opportunities &nbsp;|&nbsp; 🌐 FR · EN · AR · NL
 
