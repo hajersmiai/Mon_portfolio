@@ -53,22 +53,45 @@ Data & AI Engineer with hands-on experience building LLM-powered applications, m
 
 ### 🤖 AI Visitor Assistant — Van Gogh Exhibition
 **Exhibition Hub · Brussels · 2026**
-- Built a real-time conversational AI assistant for a museum exhibition
-- Implemented multi-level RAG with semantic cache and LLM-based answer reformulation
-- Integrated STT/TTS, visitor detection, and a 3D interface for immersive interaction
-- Handled GPU-based inference, FastAPI deployment, and knowledge-base preparation
+- Built a real-time conversational AI voice kiosk for a museum exhibition, in two architectures: a multi-level RAG pipeline and a LoRA fine-tuned local LLM runtime — both using XTTS voice cloning for the assistant's voice
+- RAG version: 2,233-document knowledge base (1,858 Van Gogh letters in TEI format + 345 Wikidata artworks), vector search, semantic cache, LLM-based answer reformulation
+- LoRA version: QLoRA fine-tuned local model, full conversational state-machine orchestration, 24/7 reliability layer (Windows service, watchdog)
+- Real-time voice interaction (faster-whisper STT) and a Unity 3D avatar synchronized with the conversational engine
+- Accent and sentiment detection module — the avatar adapts its response tone and accent to the visitor
+- Human-like barge-in (interruption) handling; GPU-based inference, FastAPI deployment, knowledge-base preparation
 
-`LLMs` `RAG` `Vector Search` `FastAPI` `Docker` `STT/TTS`
+`LLMs` `RAG` `LoRA/QLoRA` `PyTorch ` `faster-whisper XTTS` `Ollama ` `hnswlib ` `Unity 3D ` `Vector Search` `FastAPI` `Docker` `STT/TTS`
 
 ---
 
 ### 🔐 SecurePrompt — AI Data Protection Platform
 **ING · Brussels**
-- Contributed to an AI-driven platform for detecting sensitive data in LLM prompts
+-Contributed to an AI-driven data-protection pipeline ingesting multi-format documents (PDF, Word, Excel, image, text)
+- Detects and masks sensitive data before sending content to an LLM, then decrypts and reconstructs the response in the original file format
+- Built a Node.js platform around the pipeline: authentication, document upload/response interface, an analytics dashboard (sensitivity % and level per document), and full user activity history
 - Applied in a high-security banking environment with strict compliance requirements
-- Focused on NLP-based data classification and prompt safety guardrails
+`Python ` `Node.js` `PyPDF2` `pdfplumber ` `LLMs` ` python-docx` `NLP` `Data protection` `Banking`
 
-`LLMs` `NLP` `Data protection` `Banking`
+---
+### 🔐 SecurePrompt — AI Data Protection Platform
+**ING · Brussels**
+-Contributed to an AI-driven data-protection pipeline ingesting multi-format documents (PDF, Word, Excel, image, text)
+- Detects and masks sensitive data before sending content to an LLM, then decrypts and reconstructs the response in the original file format
+- Built a Node.js platform around the pipeline: authentication, document upload/response interface, an analytics dashboard (sensitivity % and level per document), and full user activity history
+- Applied in a high-security banking environment with strict compliance requirements
+`Python ` `Node.js` `PyPDF2` `pdfplumber ` `LLMs` ` python-docx` `NLP` `Data protection` `Banking`
+
+---
+### VacaViz — Belgian Job Market Intelligence Platform
+**Cefora · Brussels**
+-Scraped job offers from 5+ sources (Actiris, VDAB, Forem, Indeed + others) and normalized heterogeneous data into a unified relational schema
+- Designed and populated a PostgreSQL database with structured, cleaned job market data
+- Built a full web application with a search engine by sector, job title, and region
+- Delivered a multi-dimension dashboard: recruitment rates by region & sector, most in-demand skills, workforce distribution by age, gender, education, and origin
+- Integrated a predictive module forecasting demand by job and sector
+- Built a job-seeker matching engine to align market demand with training program recommendations
+- Developed an AI agent providing intelligent, real-time answers to job market queries
+`Python ` `Playwright` `spaCy ` `SQLAlchemy ` `Alembic` `Pydantic ` `PostgreSQL ` `LangChain` `OpenAI API`  `Sentence-Transformers` `React` `FastAPI`
 
 ---
 
@@ -92,13 +115,25 @@ Data & AI Engineer with hands-on experience building LLM-powered applications, m
 
 ---
 
-### 👁️ Deepfake Detection — Orange Hackathon
+###  Personal project · AI Agent
+**Natural Language-to-SQL Query Agent**
+- Built an AI agent that translates natural-language questions into SQL queries
+- Returns live results from a SQLite database through an interactive Streamlit interface
+`Python ` `Streamlit ` `SQLite ` `Pandas ` `Asyncio` 
+---
+###  Personal project · NLP
+**🌍 Multilingual Text Translator**
+-Streamlit app detecting and translating informal multilingual text (e.g. Franco-Arabic) into a user-specified target language
+- Integrated an external translation API
+`Python ` `Streamlit ` `Requests  ` `API Integration` `Asyncio` 
+---
+### 👁️ Deepfake Detection Browser Extension — Orange Hackathon
 **Browser extension**
-- Designed a real-time browser extension to flag manipulated media on the fly
-- Combined computer vision and fast inference under hackathon constraints
-- Delivered a working prototype from scratch in a time-pressured environment
+- Real-time browser extension: right-click on an image, video, or text to trigger an analysis
+- Popup displays a confidence score and a verdict (real/fake for image & video, AI-generated/human-written for text)
+- Working prototype delivered from scratch in a time-pressured hackathon environment
 
-`Computer vision` `Real-time inference` `Browser extension`
+`Computer vision` `Real-time inference` `Browser extension` `Hugging Face Detection` `API` 
 
 ---
 
@@ -121,6 +156,7 @@ Data & AI Engineer with hands-on experience building LLM-powered applications, m
 | Certification | Organisme | Année |
 |---|---|---|
 | AI Engineer for Developers Associate | DataCamp | Avril 2026 |
+| AI/ Data Operator | Becode | December 2025 |
 | Machine Learning with Python | IBM / Coursera | Déc. 2025 |
 | Microsoft Certified: Power BI Data Analyst Associate (PL-300) | Microsoft | 2025 |
 | Data Analyst — Certificat de réussite | L'informatique au féminin | 2024–2025 |
