@@ -6,7 +6,7 @@
 
 ---
 
-Data & AI Engineer with hands-on experience building LLM-powered applications, multi-level RAG systems, analytics pipelines, and interactive BI dashboards. After co-founding a tech company in fiber-optic infrastructure, I transitioned back to tech through data engineering and AI — combining entrepreneurial mindset with solid technical foundations.
+Data & AI Engineer with hands-on experience building LLM-powered applications, multi-level RAG systems, analytics pipelines, and interactive BI dashboards. From Java development, through a decade of operations and project coordination, to AI engineering. Looking to bring this blend of technical skill and professional maturity to a mid-level Data/AI Engineering role.
 
 📍 Brussels, Belgium &nbsp;|&nbsp; 🔍 Open to opportunities &nbsp;|&nbsp; 🌐 FR · EN · AR · NL
 
@@ -64,15 +64,6 @@ Data & AI Engineer with hands-on experience building LLM-powered applications, m
 
 ---
 
-### 🔐 SecurePrompt — AI Data Protection Platform
-**ING · Brussels**
--Contributed to an AI-driven data-protection pipeline ingesting multi-format documents (PDF, Word, Excel, image, text)
-- Detects and masks sensitive data before sending content to an LLM, then decrypts and reconstructs the response in the original file format
-- Built a Node.js platform around the pipeline: authentication, document upload/response interface, an analytics dashboard (sensitivity % and level per document), and full user activity history
-- Applied in a high-security banking environment with strict compliance requirements
-`Python ` `Node.js` `PyPDF2` `pdfplumber ` `LLMs` ` python-docx` `NLP` `Data protection` `Banking`
-
----
 ### 🔐 SecurePrompt — AI Data Protection Platform
 **ING · Brussels**
 -Contributed to an AI-driven data-protection pipeline ingesting multi-format documents (PDF, Word, Excel, image, text)
