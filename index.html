@@ -560,10 +560,44 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
     <h2 class="section-title">Featured projects</h2>
     <p class="section-sub">Real-world projects across AI engineering, analytics, and data science.</p>
     <div class="projects-grid">
-
+      <div class="project-card featured">
+        <div>
+          <div class="project-tag-top">✨ Most recent · Hackathon · 2026</div>
+          <div class="project-title">AlloDevis — The Negotiator</div>
+          <div class="project-company">ElevenLabs Hackathon · Solo project · Brussels</div>
+          <p class="project-company">Personal project · <a href="https://github.com/hajersmiai/Hackathon" style="color:var(--terracotta);">GitHub ⭐</a></p>         
+          <ul class="project-bullets">
+            <li>Built an AI voice agent that interviews a homeowner by voice, finds real Belgian contractors, calls each one and actually negotiates the price, then gives one honest, ranked recommendation</li>
+            <li>Two ElevenLabs Conversational AI agents (Estimator + Caller) orchestrated through a Flask webhook server, with dynamic variables passed per call and full barge-in (interruption) handling</li>
+            <li>Contractor discovery via the Tavily Search API + OpenStreetMap map-based zone search, with a dedicated filter that excludes lead-generation platforms which structurally never expose real contact info</li>
+            <li>Multi-factor recommendation engine: converts per-m², lump-sum, and hourly quotes onto one comparable basis, flags below/above-market pricing, and explains why the cheapest quote isn't always the winner</li>
+            <li>Tested against 3 negotiation counterpart styles (tough, evasive, hard-sell) with structured call outcomes (quote / callback / decline) logged automatically by the agent</li>
+            <li>Streamlit multi-page app (intake, contractor search, calls, report, session dashboard) with interactive Plotly charts and a PDF export</li>
+          </ul>
+          <div class="project-chips">
+            <span class="project-chip">ElevenLabs Agents Platform</span>
+            <span class="project-chip">Conversational AI</span>
+            <span class="project-chip">Voice Agents</span>
+            <span class="project-chip">Python</span>
+            <span class="project-chip">Streamlit</span>
+            <span class="project-chip">Flask</span>
+            <span class="project-chip">Tavily Search API</span>
+            <span class="project-chip">OpenStreetMap</span>
+            <span class="project-chip">Webhooks</span>
+            <span class="project-chip">Negotiation Agent</span>
+          </div>
+          <a href="https://youtu.be/mnFFIG4YuzI" target="_blank">
+            <img src="https://img.youtube.com/vi/mnFFIG4YuzI/hqdefault.jpg"
+                 alt="AlloDevis demo video"
+                 style="width:100%; border-radius:8px; margin-bottom:12px;">
+          </a>
+        </div>
+      <div class="project-number">01</div>
+    </div>
+      
       <div class="project-card featured fade-in">
         <div>
-          <div class="project-tag-top">✨ Most recent · 2026</div>
+          
           <h3 class="project-title">AI Visitor Assistant — Van Gogh Exhibition</h3>
           <p class="project-company">Exhibition Hub · Brussels</p>
           <ul class="project-bullets">
@@ -592,7 +626,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
             <span class="project-chip">STT/TTS</span>
           </div>
         </div>
-        <div class="project-number">01</div>
+        <div class="project-number">02</div>
       </div>
 
       <div class="project-card fade-in">
@@ -619,7 +653,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
           </div>
           <img src="photo-ing.jpg" class="project-photo" alt="ING live demo" onclick="openPhoto(this.src, this.alt)">
         </div>
-        <div class="project-number">02</div>
+        <div class="project-number">03</div>
       </div>
 
       <div class="project-card fade-in">
@@ -656,7 +690,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
           </div>
           <img src="photo-cefora.jpg" class="project-photo" alt="VacaViz presentation at Cefora" onclick="openPhoto(this.src, this.alt)">
         </div>
-        <div class="project-number">06</div>
+        <div class="project-number">04</div>
       </div>
 
       <div class="project-card fade-in">
@@ -675,7 +709,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
             <span class="project-chip">KPI monitoring</span>
           </div>
         </div>
-        <div class="project-number">04</div>
+        <div class="project-number">05</div>
       </div>
 
       <div class="project-card fade-in">
@@ -698,7 +732,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
           </div>
           <img src="photo-orange.jpg" class="project-photo" alt="Orange Hackathon presentation" onclick="openPhoto(this.src, this.alt)">
         </div>
-        <div class="project-number">05</div>
+        <div class="project-number">06</div>
       </div>
 
       <div class="project-card fade-in">
@@ -718,7 +752,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
             <span class="project-chip">OOP</span>
           </div>
         </div>
-        <div class="project-number">06</div>
+        <div class="project-number">07</div>
       </div>
       <div class="project-card fade-in">
         <div>
@@ -737,7 +771,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
             <span class="project-chip">Asyncio </span>
           </div>
         </div>
-        <div class="project-number">07</div>
+        <div class="project-number">08</div>
       </div>
       <div class="project-card fade-in">
         <div>
@@ -756,7 +790,7 @@ footer a { color: var(--terracotta-light); text-decoration: none; }
             <span class="project-chip">Asyncio </span>
           </div>
         </div>
-        <div class="project-number">08</div>
+        <div class="project-number">09</div>
       </div>
     </div>
   </div>
